@@ -1,4 +1,4 @@
-from pypdf import PdfReader, PdfWriter, Transformation
+from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
 
 reader = PdfReader('ml_primer.pdf')

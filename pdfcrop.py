@@ -5,13 +5,11 @@ reader = PdfReader('ml_primer.pdf')
 
 writer = PdfWriter()
 
+ro = RectangleObject((120, 70, 490, 700))
 
 for page in reader.pages:
-    mb = page.mediabox
-    mb.left, mb.bottom = (120, 70)
-    mb.right, mb.top = (490, 700)
-    
-    page.cropbox = RectangleObject((mb.left, mb.bottom, mb.right, mb.top))
+        
+    page.cropbox = ro
     
     writer.add_page(page)
 
